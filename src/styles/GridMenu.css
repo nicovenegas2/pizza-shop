@@ -1,0 +1,14 @@
+.gridMenu-menu{
+    display: grid;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    padding: 1vw;
+}
+
+.gridMenu-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
