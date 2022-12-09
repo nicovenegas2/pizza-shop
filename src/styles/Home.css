@@ -1,7 +1,8 @@
-.root{
+#root{
     background-color: rgb(242, 242, 242);
-    height: 100%;
+    height: 100vh;
     width: 100%;
+
 }
 .frameImage{
     width: 63vw;
