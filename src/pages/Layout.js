@@ -1,10 +1,14 @@
 import React from "react";
 import { Outlet} from "react-router-dom";
 import '../styles/Layout.css'
-import NavBar from "../components/NavBar";
 function Layout() {
+    const style = {
+        height: "100vh",
+        width: "100vw"
+    }
+
     return (
-        <div >
+        <div style={style}>
             <Outlet />
         </div>
     );
