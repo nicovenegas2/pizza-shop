@@ -1,0 +1,39 @@
+.root{
+    background-color: rgb(242, 242, 242);
+    height: 100%;
+    width: 100%;
+}
+.frameImage{
+    width: 63vw;
+    height: 50vh;
+    background-size: cover;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.proms-title{
+    width: 63vw;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.proms {
+    width: 63vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}

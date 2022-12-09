@@ -1,0 +1,14 @@
+.root{
+    background-color: rgb(242, 242, 242);
+    height: 100%;
+    width: 100%;
+}
+
+.grid-menu{
+    display: grid;
+    background-color: aqua;
+    grid-template-columns: 3fr 1fr;
+    height: 100%;
+    width: 95vw;
+    margin: 0 auto;
+}
