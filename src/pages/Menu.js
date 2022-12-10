@@ -3,6 +3,7 @@ import CartShop from "../components/CartShop";
 import GridMenu from "../components/GridMenu";
 import NavBar from "../components/NavBar";
 import '../styles/Menu.css'
+import sliderNav from "../scripts/sliderNav";
 
 function Menu() {
     const slides = [
@@ -18,9 +19,15 @@ function Menu() {
         {image: slides[1].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "14500",class: "Indivudual"},
         {image: slides[3].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "9990",class: "Familiar"},
         {image: slides[4].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "9990",class: "Familiar"},
+        {image: slides[2].url,name: "super duo",description: "Pizza de peperoni",price: "100000",class: "familiar"},
+        {image: slides[1].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "14500",class: "Indivudual"},
+        {image: slides[3].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "9990",class: "Familiar"},
+        {image: slides[4].url,name: "pizza supreme",description: "Pizza con extra queso, toques de peperoni para todos los gustos",price: "9990",class: "Familiar"},
     ]
 
-
+    React.useEffect(() => {
+        sliderNav();
+    }, []);
     return (
         <div className="root">
             <NavBar />
@@ -36,15 +43,16 @@ function Menu() {
                             <a href="#menu-pizzas">Pizzas</a>
                             <a href="#menu-bebidas">Bebidas</a>
                             <a href="#menu-variety">Variedad</a>
+                            <span className="menu-nav-sections-indicator" id="menu-nav-indicator"></span>
                         </nav>
                         <div className="menu-sections">
                             <GridMenu name="pizzas" items={proms}/>
                             <GridMenu name="bebidas" items={proms}/>
+                            <GridMenu name="variety" items={proms}/>
                         </div>
                     </div>
-
                 </div>
-                <CartShop />
+                <div ><CartShop /></div>
             </div>
         </div>
     );

@@ -6,6 +6,10 @@
     box-shadow: 0 0 5px #ccc;
     padding: 1vw;
 }
+.gridMenu-menu h2{
+    font-size: 2.5vh;
+    text-transform: capitalize;
+}
 
 .gridMenu-section{
     display: grid;

@@ -4,6 +4,12 @@ import '../styles/Item.css'
 
 
 function Item({item}) {
+
+    function buy() {
+        console.log("buy")
+    }
+
+
     return (
         <div >
             <ListGroup variant="flush" className="item">
@@ -19,7 +25,7 @@ function Item({item}) {
                 <ListGroup.Item className="itemList name">{item.name}</ListGroup.Item>
                 <ListGroup.Item className="itemList desc">{item.description}</ListGroup.Item>
                 <ListGroup.Item> 
-                    <a href="/buy"><Button className="itemList buy" size="lg" >Comprar</Button></a>
+                    <a href="#title-cart" onClick={buy}><Button className="itemList buy" size="lg" >Comprar</Button></a>
                 </ListGroup.Item>
             </ListGroup>
         </div>

@@ -4,7 +4,7 @@ import '../styles/CartShop.css'
 
 function CartShop() {
     return (
-        <div className="cart">
+        <div className="cart" id="shoppingCart">
             <h3 id="title-cart">Carrito de compras</h3>
             <hr />
             <div id="content-cart">

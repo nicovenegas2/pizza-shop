@@ -1,14 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .root{
     background-color: rgb(242, 242, 242);
     height: 100%;
     width: 100vw;
     margin: 0 auto;
+    scroll-behavior: smooth;
     
 }
 
-a{
-    text-decoration: none;
-}
 
 .grid-menu{
     display: grid;
@@ -23,21 +25,34 @@ a{
     height: 100%;
     width: 100%;
     margin: 0 auto 3vh auto;
-
+    
 }
 
+#menu-nav-sections a{
+    text-decoration: none;
+    color: black;
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 1vh 6vh;
+}
 
 #menu-nav-sections{
-    background-color: aqua;
     position: absolute;
+    background-color: white;
+    border-radius: .7vh;
+    box-shadow: 0 .5vh .4vh .1vh rgba(36, 221, 88, 0.093);
     z-index: 2;
-    width: 50%;
     margin: 0 auto;
+    left: 3vw;
+    padding: 0vh 33.5vh;
+    padding-right: 33.8vh;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     align-items: flex-start;
     text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
 }
 
 #banner-make-pizza{
@@ -47,7 +62,7 @@ a{
 }
 
 #banner-make-pizza > a{
-    position: fixed;
+    position: absolute;
     background-color: #40AE7F;
     border-radius: .7vh;
     padding: 1vh 2vh;
@@ -56,6 +71,11 @@ a{
     color: white;
     text-decoration: none;
     font-size: 2vh;
+}
+
+.menu-sections{
+    scroll-behavior: smooth;
+    padding-top: 3vh;
 }
 
 
@@ -70,4 +90,27 @@ a{
     height: 63vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    scroll-behavior: smooth;
+    box-shadow: 0 .5vh 1vh 0 rgba(0, 0, 0, 0.1);
+}
+
+#content-menu::-webkit-scrollbar{
+    width: .2vw;
+}
+
+#content-menu::-webkit-scrollbar-thumb{
+    background-color: #12b971;
+    border-radius: .5vh;
+}
+
+.menu-nav-sections-indicator {
+    position: absolute;
+    background-color: #40AE7F;
+    border-radius: .7vh;
+    width: 3vw;
+    height: .8vh;
+    top: 4vh;
+    /* left: 25vw; */
+    transition: .3s ease-in-out all;
+    /* translate: -100vw; */
 }
