@@ -13,11 +13,11 @@ function CollapsibleExample() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="CATALOGO" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/menu">PIZZAS</NavDropdown.Item>
-              <NavDropdown.Item href="/menu">BEBIDAS</NavDropdown.Item>
-              <NavDropdown.Item href="/menu">VARIEDAD</NavDropdown.Item>
+              <NavDropdown.Item href="/menu/#menu-pizzas">PIZZAS</NavDropdown.Item>
+              <NavDropdown.Item href="/menu/#menu-bebidas">BEBIDAS</NavDropdown.Item>
+              <NavDropdown.Item href="/menu/#menu-variety">VARIEDAD</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#features">PROMOCIONES</Nav.Link>
+            <Nav.Link href="/#prom">PROMOCIONES</Nav.Link>
             <Nav.Link href="#pricing">ARMA TU PIZZA</Nav.Link>
           </Nav>
           <Nav>

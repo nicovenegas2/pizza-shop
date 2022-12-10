@@ -2,14 +2,29 @@
     background-color: rgb(242, 242, 242);
     height: 100vh;
     width: 100%;
+    overflow-x: hidden !important;
 
 }
+
+::-webkit-scrollbar {
+    width: .3vw;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #12b971;
+    border-radius: 1vh;
+}
+
 .frameImage{
     width: 63vw;
     height: 50vh;
     background-size: cover;
     margin: auto;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 .banner {
@@ -23,8 +38,8 @@
 .proms-title{
     width: 63vw;
     margin: auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
     font-size: 2.5em;
     font-weight: 600;
     color: rgb(0, 0, 0);

@@ -25,7 +25,7 @@ function Home() {
                 <img className="banner" src={slides[0].url} alt={slides[0].title} />
             </div>
             <h2 className="proms-title">Promociones hechas para ti</h2>
-            <div className="proms">
+            <div className="proms" id="prom">
                 {proms.map((item) => (
                     <Item item={item} />
                 ))}
