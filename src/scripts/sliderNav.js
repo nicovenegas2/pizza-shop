@@ -6,12 +6,10 @@ export default function sliderNav() {
     
     let indicatorsize = menu.querySelector("a").offsetWidth;
     indicator.style.width = indicatorsize + "px";
-    console.log(indicator)
     
     const  observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if(entry.isIntersecting){
-                console.log(entry.target.id);
                 indicator.style.left = menu.querySelector("a[href='#"+entry.target.id+"']").offsetLeft + "px";
                 indicator.style.width = menu.querySelector("a[href='#"+entry.target.id+"']").offsetWidth + "px";
             }

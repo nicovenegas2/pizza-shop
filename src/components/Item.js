@@ -5,8 +5,27 @@ import '../styles/Item.css'
 
 function Item({item}) {
 
-    function buy() {
-        console.log("buy")
+    function addCart() {
+        const name = item.name;
+        const price = item.price;
+        let new_data = {};
+        new_data[name] = price+ ',' + '1';
+        let old_data = JSON.parse(localStorage.getItem('cart'));
+        if (old_data === null) {
+            localStorage.setItem('cart', JSON.stringify(new_data));
+        } else {
+            if (old_data[name] === undefined) {
+                old_data[name] = price + ',' + '1';
+                localStorage.setItem('cart', JSON.stringify(old_data));
+            } else {
+                const old_price = old_data[name].split(',')[0];
+                const old_quantity = old_data[name].split(',')[1];
+                const new_quantity = parseInt(old_quantity) + 1;
+                old_data[name] = old_price + ',' + new_quantity;
+                localStorage.setItem('cart', JSON.stringify(old_data));
+            }
+        }
+        
     }
 
 
@@ -25,7 +44,7 @@ function Item({item}) {
                 <ListGroup.Item className="itemList name">{item.name}</ListGroup.Item>
                 <ListGroup.Item className="itemList desc">{item.description}</ListGroup.Item>
                 <ListGroup.Item> 
-                    <a href="#title-cart" onClick={buy}><Button className="itemList buy" size="lg" >Comprar</Button></a>
+                    <a href="#title-cart" onClick={addCart}><Button className="itemList buy" size="lg" >Comprar</Button></a>
                 </ListGroup.Item>
             </ListGroup>
         </div>
