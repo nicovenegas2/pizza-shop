@@ -9,13 +9,13 @@ function Item({item}) {
         const name = item.name;
         const price = item.price;
         let new_data = {};
-        new_data[name] = price+ ',' + '1';
+        new_data[name] = price+ ',1';
         let old_data = JSON.parse(localStorage.getItem('cart'));
         if (old_data === null) {
             localStorage.setItem('cart', JSON.stringify(new_data));
         } else {
             if (old_data[name] === undefined) {
-                old_data[name] = price + ',' + '1';
+                old_data[name] = price + ',1';
                 localStorage.setItem('cart', JSON.stringify(old_data));
             } else {
                 const old_price = old_data[name].split(',')[0];

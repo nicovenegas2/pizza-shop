@@ -6,10 +6,25 @@ import '../styles/CartShop.css'
 function CartShop() {
 
     const [cartList, setCart] = React.useState({});
+    const [total, setTotal] = React.useState(0);
 
     function updateCart() {
         const newCart = JSON.parse(localStorage.getItem('cart'));
+        let newTotal = 0;
         setCart(newCart);
+        Object.keys(newCart).forEach((key) => {
+            if (newCart[key] !== undefined) {
+                const string = newCart[key].split(',');    
+                const price = parseInt(string[0]);
+                const quantity = parseInt(string[1]);
+                newTotal += price * quantity;
+                console.log(newTotal);
+            }
+            setTotal(newTotal);
+        });
+        if (Object.keys(newCart).length === 0) {
+            setTotal(0);
+        }
     }
     
     
@@ -17,8 +32,9 @@ function CartShop() {
         const interval = setInterval(() => {
             // console.log(cartList)
             updateCart();
+            return () => clearInterval(interval);
         }, 200);
-        },[cartList]);
+        },[cartList, total]);
 
 
     const cartItems = Object.keys(cartList).map((key) => {
@@ -26,6 +42,8 @@ function CartShop() {
             return (
                 <CartItem name={key} details={cartList[key]} />
             );
+        } else {
+            return null;
         }
     });
 
@@ -38,8 +56,8 @@ function CartShop() {
                 {cartItems}
             </div>
             <div className="total">
-                <h4 id="total-pay">Total: $0.00</h4>
-                <Button id="pay-button" variant="primary">Proceder a pagar</Button>
+                <h4 id="total-pay">Total: {new Intl.NumberFormat('cl-CL', { style: 'currency', currency: 'CLP' }).format(total)}</h4>
+                <a id="cart-pay-link" href="/pay"><Button id="cart-pay-button"  variant="primary">Proceder a pagar</Button></a>
             </div>
                  
         </div>

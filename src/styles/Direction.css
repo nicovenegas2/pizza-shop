@@ -1,0 +1,33 @@
+#tab-direction{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.direction-delivery{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.direction-input-box{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+    padding: 1vh 0;
+}
+
+.direction-input-label{
+    color: #40AE7F;
+    font-weight: 500;
+
+}
+
+.direction-input-text{
+    width: 70%;
+    margin: .2vh 0;
+    border: .2vh solid #afafaf;
+    border-radius: .8vh;
+
+}

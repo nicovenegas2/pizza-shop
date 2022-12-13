@@ -3,10 +3,33 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../styles/NavBar.css';
 
 function CollapsibleExample() {
+  const [cartQuantity, setCartQuantity] = React.useState(0);
+
+  function updateCartQuantity() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    let newCartQuantity = 0;
+    Object.keys(cart).forEach((key) => {
+      if (cart[key] !== undefined) {
+        const string = cart[key].split(',');
+        const quantity = parseInt(string[1]);
+        newCartQuantity += quantity;
+      }
+    });
+    setCartQuantity(newCartQuantity);
+  }
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      updateCartQuantity();
+    }, 100);
+  }, [cartQuantity]);
+
+
   return (
-    <Navbar collapseOnSelect expand="xl" bg="light" variant="light" sticky='top'>
+    <Navbar collapseOnSelect expand="xl" bg="light" variant="light" sticky='top' id='navBar'>
       <Container>
         <Navbar.Brand href="/">ALGO-PIZZA</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -21,7 +44,8 @@ function CollapsibleExample() {
             <Nav.Link href="#pricing">ARMA TU PIZZA</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">CARRITO</Nav.Link>
+            {cartQuantity > 0 ? <div id='nav-cart-quantity'>{cartQuantity}</div> : null}
+            <Nav.Link href="/menu/#carrito">CARRITO</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

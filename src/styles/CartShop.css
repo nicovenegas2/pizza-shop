@@ -31,7 +31,7 @@
 
 }
 
-#pay-button{
+#cart-pay-link{
     background-color: #40AE7F;
     color: white;
     font-size: 2vh;
@@ -42,7 +42,29 @@
     margin-left: 3vw;
 }
 
-#pay-button:hover{
+#cart-pay-button{
+    background-color: transparent;
+    font-size: 2vh;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    font-weight: 600;
+    border: 0;
+    border-radius: .5vh;
+}
+#cart-pay-button #id{
+    background-color: #40AE7F;
+    color: white;
+    font-size: 2vh;
+    font-weight: 600;
+    width: 15vw;
+    border: 0;
+    border-radius: .5vh;
+    margin-left: 3vw;
+}
+
+#cart-pay-link:hover{
     background-color: #308460;
 }
 

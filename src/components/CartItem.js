@@ -12,7 +12,7 @@ function CartItem(prop) {
 
     const changeQuantity = (e) => {
         let data = JSON.parse(localStorage.getItem('cart'));
-        if (e == 0) {
+        if (e === 0) {
             delete data[name];
         }else {
             data[name] = `${price},${e}`;
