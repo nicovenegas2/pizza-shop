@@ -6,14 +6,7 @@ import '../styles/Menu.css'
 import sliderNav from "../scripts/sliderNav";
 
 function Menu() {
-    const slides = [
-        {url: "https://cdn.papajohns.cl/thumbnails/banners/sd_banner_web_1670245765_large.jpg", title: "Banner 1"},
-        {url: "https://cdn.papajohns.cl/thumbnails/pizzas/greekfeta_1638284313_small.jpg", title: "Banner 2"},
-        {url: "https://cdn.papajohns.cl/thumbnails/offers/sd_caluga_web_1670245051_small.jpg", title: "Banner 3"},
-        {url: "https://cdn.papajohns.cl/thumbnails/offers/comborolls_1619191916_small.jpg", title: "Banner 3"},
-        {url: "https://cdn.papajohns.cl/thumbnails/offers/bigcombo_1617820358_small.jpg", title: "Banner 3"},
-    ];
-
+    
     React.useEffect(() => {
         sliderNav();
     }, []);

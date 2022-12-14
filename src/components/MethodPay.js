@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Tabs, Tab, Spinner } from "react-bootstrap";
-import { redirect } from "react-router-dom";
 import { sleep } from "../scripts/sleep";
-import { Button } from "bootstrap";
 
 import "../styles/MethodPay.css";
 

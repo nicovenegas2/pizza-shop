@@ -17,6 +17,7 @@ html{
     column-gap: 2vw;
     grid-template-columns: 2fr 1fr;
     width: 95vw;
+    height: 100%;
     margin: 0 auto;
     margin-top: 3vh;
 }
@@ -67,7 +68,7 @@ html{
     border-radius: .7vh;
     padding: 1vh 2vh;
     left: 25vw;
-    top: 18vh;
+    top: 22vh;
     color: white;
     text-decoration: none;
     font-size: 2vh;

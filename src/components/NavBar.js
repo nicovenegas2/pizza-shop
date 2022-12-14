@@ -25,6 +25,7 @@ function CollapsibleExample() {
   React.useEffect(() => {
     const interval = setInterval(() => {
       updateCartQuantity();
+      return () => clearInterval(interval);
     }, 100);
   }, [cartQuantity]);
 
