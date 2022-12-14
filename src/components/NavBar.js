@@ -10,6 +10,7 @@ function CollapsibleExample() {
 
   function updateCartQuantity() {
     const cart = JSON.parse(localStorage.getItem('cart'));
+    if(cart === null) window.localStorage.setItem('cart', JSON.stringify({}));
     let newCartQuantity = 0;
     Object.keys(cart).forEach((key) => {
       if (cart[key] !== undefined) {
@@ -31,14 +32,15 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="xl" bg="light" variant="light" sticky='top' id='navBar'>
       <Container>
-        <Navbar.Brand href="/">ALGO-PIZZA</Navbar.Brand>
+        <Navbar.Brand href="/"><img src='https://i.postimg.cc/8PJ8tRNT/logo.png' alt='logo' id='nav-logo' /></Navbar.Brand>
+        <Navbar.Brand href="/">PIZZA-SHOP</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="CATALOGO" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/menu/#menu-pizzas">PIZZAS</NavDropdown.Item>
               <NavDropdown.Item href="/menu/#menu-bebidas">BEBIDAS</NavDropdown.Item>
-              <NavDropdown.Item href="/menu/#menu-variety">VARIEDAD</NavDropdown.Item>
+              <NavDropdown.Item href="/menu/#menu-variedad">VARIEDAD</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/#prom">PROMOCIONES</Nav.Link>
             <Nav.Link href="#pricing">ARMA TU PIZZA</Nav.Link>

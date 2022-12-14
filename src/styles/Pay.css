@@ -8,6 +8,10 @@
 
 
 .pay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
     width: 45vw;  
     margin: 0 auto;
     margin-left: 10%;
@@ -41,10 +45,11 @@
 
 .pay-direction-box{
     margin-top: 8%;
-    height: 30vh;
+    height: 45vh;
 }
 
 .pay-method-box{
     margin-bottom: 5%;
-    height: 40vh;
+    height: 25vh;
 }
+

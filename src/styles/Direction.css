@@ -31,3 +31,38 @@
     border-radius: .8vh;
 
 }
+
+.direction-input-text[class~="details"]{
+    height: 16vh;
+    font-size: 1.5vh;
+    resize: none;
+}
+
+.direction-input-text:focus{
+    outline: none;
+    border: .3vh solid #2a845c;
+}
+
+
+.method-pay-box{
+    height: 100%;
+    width: 100%;
+}
+
+.method-pay-button{
+    width: 90%;
+    height: 100%;
+    border: none;
+    background-color: #40AE7F;
+    color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    border-radius: .8vh;
+    margin: 0 5%;
+    padding: 2vh;
+    margin-top: 6%;
+}
+
+.method-pay-button:hover{
+    background-color: #2a845c;
+}

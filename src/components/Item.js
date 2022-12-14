@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import '../styles/Item.css'
-
-
+import { getInfo } from "../images/data";
 function Item({item}) {
+    const info = getInfo(item);
+    const image = info.image;
+    const price = info.price;
 
     function addCart() {
-        const name = item.name;
-        const price = item.price;
+        const name = item;
+        const price = info.price;
         let new_data = {};
         new_data[name] = price+ ',1';
         let old_data = JSON.parse(localStorage.getItem('cart'));
@@ -25,7 +27,6 @@ function Item({item}) {
                 localStorage.setItem('cart', JSON.stringify(old_data));
             }
         }
-        
     }
 
 
@@ -33,16 +34,16 @@ function Item({item}) {
         <div >
             <ListGroup variant="flush" className="item">
                 <ListGroup.Item className="itemList">
-                    <img className="img" src={item.image} alt={item.name} />
+                    <div className="itemImage"><img className="img" src={image} alt={item.name} /></div>
                     <div className="itemPriceAndClass">
                         <ListGroup horizontal>
-                            <ListGroupItem className="class">{item.class}</ListGroupItem>
-                            <ListGroupItem className="price">{new Intl.NumberFormat('cl-CL', { style: 'currency', currency: 'CLP' }).format(item.price)}</ListGroupItem>
+                            <ListGroupItem className="class">{info.class}</ListGroupItem>
+                            <ListGroupItem className="price">{new Intl.NumberFormat('cl-CL', { style: 'currency', currency: 'CLP' }).format(price)}</ListGroupItem>
                         </ListGroup>
                     </div>
                 </ListGroup.Item>
-                <ListGroup.Item className="itemList name">{item.name}</ListGroup.Item>
-                <ListGroup.Item className="itemList desc">{item.description}</ListGroup.Item>
+                <ListGroup.Item className="itemList name">{info.name}</ListGroup.Item>
+                <ListGroup.Item className="itemList desc">{info.description}</ListGroup.Item>
                 <ListGroup.Item> 
                     <a href="#title-cart" onClick={addCart}><Button className="itemList buy" size="lg" >Comprar</Button></a>
                 </ListGroup.Item>

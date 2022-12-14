@@ -16,3 +16,11 @@
 #navBar{
     font-size: 1.7vh;
 }
+#nav-logo{
+    position: relative;
+    width: 7vh;
+    height: 5vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

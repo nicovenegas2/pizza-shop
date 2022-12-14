@@ -18,7 +18,6 @@ function CartShop() {
                 const price = parseInt(string[0]);
                 const quantity = parseInt(string[1]);
                 newTotal += price * quantity;
-                console.log(newTotal);
             }
             setTotal(newTotal);
         });
@@ -59,7 +58,6 @@ function CartShop() {
                 <h4 id="total-pay">Total: {new Intl.NumberFormat('cl-CL', { style: 'currency', currency: 'CLP' }).format(total)}</h4>
                 <a id="cart-pay-link" href="/pay"><Button id="cart-pay-button"  variant="primary">Proceder a pagar</Button></a>
             </div>
-                 
         </div>
     );
 }

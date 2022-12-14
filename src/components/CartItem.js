@@ -1,9 +1,11 @@
 import React from "react";
+import { getInfo } from "../images/data";
 import '../styles/CartItem.css'
 
 function CartItem(prop) {
     // console.log(prop);
     const name = prop.name;
+    const info = getInfo(name);
     const details = prop.details;
     const string = details.split(',');
     const price = string[0];

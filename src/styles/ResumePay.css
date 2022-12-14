@@ -1,0 +1,37 @@
+.resume-pay-content-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+    padding: 2vh;
+    border-radius: 1vh;
+}
+
+#resume-pay-title{
+    font-size: 4vh;
+    font-weight: 600;
+    color: #40AE7F;
+}
+
+
+.resume-pay{
+    width: 80%;
+    height: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.resume-pay-text{
+    color: rgb(148, 148, 148);
+    font-size: 2vh;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#range-tip{
+    width: 40%;
+}
