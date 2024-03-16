@@ -2,12 +2,14 @@ html{
     scroll-behavior: smooth;
 }
 
-.root{
+.root-menu{
     background-color: rgb(242, 242, 242);
     height: 100%;
     width: 100vw;
     margin: 0 auto;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
     
 }
 

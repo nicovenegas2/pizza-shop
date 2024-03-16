@@ -11,7 +11,7 @@ function Menu() {
         sliderNav();
     }, []);
     return (
-        <div className="root">
+        <div className="root-menu">
             <NavBar />
             <br />
             <div className="grid-menu">
